@@ -66,7 +66,6 @@
       <button id="clear">Clear</button>
     </div>
     <script>
-
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     if (isMobile) {
       $('#paint').css({'width': '60%'});
@@ -78,7 +77,13 @@
       $('#clear').css({'font-size': '35px'});
     }
 
+    var cw = $('#paint').width();
+    $('#paint').css({'height': cw + 'px'});
 
+    cw = $('#number').width();
+    $('#number').css({'height': cw + 'px'});
+
+    // From https://www.html5canvastutorials.com/labs/html5-canvas-paint-application/
     var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
 
@@ -96,7 +101,7 @@
     context.lineWidth = isMobile ? 60 : 25;
     context.lineJoin = 'round';
     context.lineCap = 'round';
-    context.strokeStyle = '#555555';
+    context.strokeStyle = '#0000FF';
 
     canvas.addEventListener('mousedown', function(e) {
       context.moveTo(mouse.x, mouse.y);
