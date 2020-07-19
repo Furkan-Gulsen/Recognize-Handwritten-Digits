@@ -1,4 +1,4 @@
-Recognize Handwritten Digits - A Simple Web App
+# Recognize Handwritten Digits - A Simple Web App
 
 A simple web app that predicts numbers 0-9 using Deep Learning.
 
